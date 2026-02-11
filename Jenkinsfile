@@ -25,10 +25,10 @@ pipeline {
          } // Missing brace was here
             stage ('Deploy-To-Tomcat') {
             steps {
-           sshagent(['tomcat']) {
-                 'scp  target/*.war /scratch/tomcat/apache-tomcat-10.1.52/webapps/webapp.war'
+           
+            sh  'scp  target/*.war /scratch/tomcat/apache-tomcat-10.1.52/webapps/webapp.war'
               }      
            }       
-    }
+    
     } // Missing brace for stages was here
 } // Missing brace for pipeline was here
