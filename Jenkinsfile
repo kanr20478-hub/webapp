@@ -26,7 +26,7 @@ pipeline {
             stage ('Deploy-To-Tomcat') {
             steps {
            sshagent(['tomcat']) {
-                sh 'scp  target/*.war /scratch/tomcat/apache-tomcat-10.1.52/webapps/webapp.war'
+                 'scp  target/*.war /scratch/tomcat/apache-tomcat-10.1.52/webapps/webapp.war'
               }      
            }       
     }
