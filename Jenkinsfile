@@ -27,7 +27,7 @@ pipeline {
          steps {
                sh 'wget https://raw.githubusercontent.com/kanr20478-hub/webapp/refs/heads/master/owasp-dependency-check.sh'
                sh 'chmod +x owasp-dependency-check.sh'
-               sh 'bash owasp-dependency-check.sh'
+               sh 'bash -x owasp-dependency-check.sh'
 
          }
               }
