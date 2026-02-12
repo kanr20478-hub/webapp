@@ -15,7 +15,12 @@ pipeline {
                 ''' 
             }
         }
-
+       state('Git secret checks') {
+         steps{
+           sh 'rm tufflehog' || true
+           sh 'docker run gesellix/trufflehog --json https://github.com/kanr20478-hub/webapp.git > trufflehog'
+         }
+       }
         stage('Build') {
             steps {
                 // Using mvn is now possible because of the tools block above
