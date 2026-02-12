@@ -19,6 +19,7 @@ pipeline {
          steps {
            sh 'rm tufflehog || true'
            sh 'docker run gesellix/trufflehog --json https://github.com/kanr20478-hub/webapp.git > trufflehog'
+           sh 'cat trufflehog'
          }
        }
         stage('Build') {
