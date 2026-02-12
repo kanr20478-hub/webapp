@@ -23,7 +23,7 @@ pipeline {
          }
        }
 
-        stage("Source Composition Analysis') {
+        stage('Source Composition Analysis') {
          steps {
                sh 'wget https://raw.githubusercontent.com/kanr20478-hub/webapp/refs/heads/master/owasp-dependency-check.sh'
                sh 'chmod +x owasp-dependency-check.sh'
